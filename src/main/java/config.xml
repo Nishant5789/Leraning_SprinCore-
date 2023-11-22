@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+		http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		<!-- upper part is metadata configurartion -->
+		
+<!-- 		this is bean-->		
+
+		<bean class="com.springcore.Student" name="student1">
+			 <property name="studentId">
+			 	<value>123</value>
+			 </property>
+			 <property name="studentName">
+			 	<value>Jeenal</value>
+			 </property>
+			 <property name="studentAddress">
+			 	<value>Gujarat</value>
+			 </property>
+		</bean>
+<!-- 		// use pscema way -->
+		<bean class="com.springcore.Student" name="student2" p:studentName="Nishant" p:studentId="123" p:studentAddress="gujarat"/>
+		
+		
+		<bean class="com.springcore.collection.Emp" name="emp1">
+			 <property name="name">
+			 	<value>Nishant</value>
+			 </property>
+			 <property name="phones">
+				 <list>
+				 	<value>112324324</value>
+				 	<value>112324324</value>
+				 	<value>112324324</value>
+				 </list>
+			 </property>
+			 <property name="address">
+				 <set>
+				 	<value>Gujarat</value>
+				 	<value>banglore</value>
+				 	<value>surat</value>
+				 </set>
+			 </property>
+			 
+			 <property name="courses">
+				 <map>
+				 	<entry key="java" value="2-months"/>
+				 	<entry key="python" value="1-months"/>
+				 </map>
+			 </property>
+			 
+		</bean>
+		
+</beans>

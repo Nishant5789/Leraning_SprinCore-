@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+		http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		
+	<bean class="com.springcore.autowirebyxml.Address" name="address">
+		<constructor-arg value="damni zampa" />
+		<constructor-arg value="Pardi" />
+	</bean>	
+	
+	<bean class="com.springcore.autowirebyxml.Address" name="address1">
+		<constructor-arg value="damni zampa" />
+		<constructor-arg value="Pardi" />
+	</bean>	
+	
+	<!-- autowiring byName --> <!-- name attribute  must be same in bean  and class  -->
+	 <!-- use setmethod to intilize bean -->
+	<!-- <bean class="com.springcore.autowirebyxml.Emp" name="emp" autowire="byName">
+	</bean>	 -->
+	
+	<!-- autowiring in byType type must be same in bean class->name and class type in attribute -->
+	<!-- <bean class="com.springcore.autowirebyxml.Emp" name="emp" autowire="byName">
+	</bean>	 -->
+	
+	<!-- autowiring using constructor --> <!-- use contructor to intilize bean -->
+	<bean class="com.springcore.autowirebyxml.Emp" name="emp" autowire="constructor">
+	</bean>	
+</beans>
+

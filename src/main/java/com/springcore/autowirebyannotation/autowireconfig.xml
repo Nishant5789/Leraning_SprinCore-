@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p" 
+		xmlns:c="http://www.springframework.org/schema/c"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">	
+		
+	<context:annotation-config/>		
+		
+	<bean class="com.springcore.autowirebyannotation.Address" name="address1">
+		<constructor-arg value="damni zampa" />
+		<constructor-arg value="Pardi1" />
+	</bean>	
+	
+	<bean class="com.springcore.autowirebyannotation.Address" name="address2">
+		<constructor-arg value="damni zampa" />
+		<constructor-arg value="Pardi2" />
+	</bean>	
+		
+	<!-- IF more than one bean exits with diffrent name than error is occur in autowiring -->
+	<!-- in this case we need use  qualifier -->
+	
+	<bean class="com.springcore.autowirebyannotation.Emp" name="emp">
+	</bean>	
+</beans>
+
